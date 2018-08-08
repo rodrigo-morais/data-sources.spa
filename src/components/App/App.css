@@ -12,5 +12,6 @@ main {
   grid-column: 2;
   grid-row: 2;
   align-self: start;
-  margin-left: 18px;
+  height: 100vh;
+  border-top: solid 0.5px #ABA9A9;
 }

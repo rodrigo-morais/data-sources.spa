@@ -3,4 +3,5 @@ aside {
   grid-row: 2;
   background-color: #383737;
   padding: 5px 10px;
+  border-top: solid 2px #49E5CD;
 }
