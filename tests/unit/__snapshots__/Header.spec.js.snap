@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideBar.vue renders according to design 1`] = `
+exports[`Header.vue renders according to design 1`] = `
 <header>
   <h1>My Data Sources</h1>
 </header>

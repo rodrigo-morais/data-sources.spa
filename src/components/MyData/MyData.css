@@ -1,0 +1,16 @@
+section {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #ffffff;
+  border-bottom: solid 1px #C7C5C5;
+  color: #707372;
+  padding-left: 2%;
+  font-size: 14px;
+  font-weight: normal;
+
+  h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
