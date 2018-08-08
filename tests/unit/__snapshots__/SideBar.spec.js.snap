@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar.vue renders according to design 1`] = `
+<aside>
+  <nav></nav>
+</aside>
+`;
