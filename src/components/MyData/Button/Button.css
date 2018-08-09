@@ -1,0 +1,11 @@
+button {
+  background-color: #E67E22;
+  color: #ffffff;
+  height: 60%;
+  width: 40%;
+  place-self: center end;
+  margin-right: 4%;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #E67E22, #E67E22 40%, #EB984E 65%, #F0B27A 80%, #F5CBA7 95%);
+  font-weight: bold;
+}

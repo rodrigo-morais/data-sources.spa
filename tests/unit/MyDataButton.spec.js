@@ -1,15 +1,11 @@
-import { mount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { createRenderer } from 'vue-server-renderer';
-import MyData from '@/components/MyData/index.vue';
 import Button from '@/components/MyData/Button/index.vue';
 
-jest.mock('@/components/MyData/Button/index.vue', () => 'Button');
-
-describe('MyData.vue', () => {
+describe('MyData.Button.vue', () => {
   it('renders according to design', () => {
     const renderer = createRenderer();
-    const wrapper = mount(MyData);
-
+    const wrapper = shallowMount(Button);
     renderer.renderToString(wrapper.vm, (err, str) => {
       if (err) throw new Error(err);
       expect(str).toMatchSnapshot();
