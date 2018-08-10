@@ -2,6 +2,6 @@
 
 exports[`SearchTextBox.vue renders according to design 1`] = `
 <form>
-  <input type="text" placeholder=" Filter Data Sources...">
+  <input type="text" id="searchBox" placeholder=" Filter Data Sources...">
 </form>
 `;
