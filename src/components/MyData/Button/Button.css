@@ -8,4 +8,5 @@ button {
   border-radius: 20px;
   background-image: linear-gradient(to right, #E67E22, #E67E22 40%, #EB984E 65%, #F0B27A 80%, #F5CBA7 95%);
   font-weight: bold;
+  min-width: 140px;
 }
