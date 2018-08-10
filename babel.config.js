@@ -3,4 +3,4 @@ module.exports = {
     '@vue/app',
   ],
   plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
-};
+}

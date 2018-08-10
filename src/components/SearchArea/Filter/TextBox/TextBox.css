@@ -1,0 +1,15 @@
+form {
+  align-self: center;
+}
+
+input {
+  position: relative;
+  font-family: 'FontAwesome';
+  padding: 2%;
+  font-size: 12px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}

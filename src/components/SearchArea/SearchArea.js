@@ -1,6 +1,8 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import Vue from 'vue'
+import Component from 'vue-class-component'
+import SearchFilter from './Filter/index.vue'
 
 export default Component({
   name: 'SearchArea',
-})(class SearchArear extends Vue {});
+  components: { SearchFilter },
+})(class SearchArear extends Vue {})
