@@ -1,3 +1,13 @@
-<div>
+<div class="filter">
   <SearchTextBox/>
+  <Dropdown
+    class-name="dropdown__legal-entity"
+    label="Legal Entity"
+    v-bind:items="['Show All', 'Yes', 'No']"
+  />
+  <Dropdown
+    class-name="dropdown__sort-by"
+    label="Sort by"
+    v-bind:items="['Most recent', 'Oldest']"
+  />
 </div>

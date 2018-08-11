@@ -1,0 +1,26 @@
+<div v-bind:class="[dropdownClass]">
+  <a
+    href="#"
+    class="dropdown__label"
+    @click="handleToggle"
+  >
+    {{label}}:
+  </a>
+  <a
+    href="#"
+    class="dropdown__label dropdown__currentValue"
+    @click="handleToggle"
+  >
+    {{currentValue}}
+  </a>
+  <div v-bind:class="{'dropdown__menu--before': isVisible, 'dropdown__menu--close': !isVisible}" />
+  <div
+    v-bind:class="[standardClass, {'dropdown__menu--open': isVisible, 'dropdown__menu--close': !isVisible}]"
+  >
+    <ul>
+      <li v-for="item in items" @click="selectItem">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</div>

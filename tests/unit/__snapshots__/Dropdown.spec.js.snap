@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown.vue renders according to design 1`] = `
+<div class="dropdown ">
+  <a href="#" class="dropdown__label">
+    Select:
+  </a>
+  <a href="#" class="dropdown__label dropdown__currentValue">
+    1
+  </a>
+  <div class="dropdown__menu--close"></div>
+  <div class="dropdown__menu dropdown__menu--close">
+    <ul>
+      <li>
+        1
+      </li>
+      <li>
+        2
+      </li>
+      <li>
+        3
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Dropdown.vue renders according to design when is open 1`] = `
+<div class="dropdown ">
+  <a href="#" class="dropdown__label">
+    Select:
+  </a>
+  <a href="#" class="dropdown__label dropdown__currentValue">
+    1
+  </a>
+  <div class="dropdown__menu--before"></div>
+  <div class="dropdown__menu dropdown__menu--open">
+    <ul>
+      <li>
+        1
+      </li>
+      <li>
+        2
+      </li>
+      <li>
+        3
+      </li>
+    </ul>
+  </div>
+</div>
+`;

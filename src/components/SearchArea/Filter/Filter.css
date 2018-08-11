@@ -1,6 +1,6 @@
-div {
+.filter {
   display: grid;
-  grid-template-columns: 35% 20% 20% 25%;
+  grid-template-columns: 35% 22% 22% 21%;
   grid-template-rows: 1fr;
 
   grid-column: span 2;
@@ -11,4 +11,16 @@ div {
   color: #49E5CD;
   padding-left: 2%;
   font-size: 10px;
+}
+
+.dropdown__legal-entity {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+}
+
+.dropdown__sort-by {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
 }

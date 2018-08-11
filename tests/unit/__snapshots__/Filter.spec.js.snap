@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchFilter.vue renders according to design 1`] = `
-<div>
+<div class="filter">
   <SearchTextBox-stub></SearchTextBox-stub>
+  <Dropdown-stub className="dropdown__legal-entity" label="Legal Entity" items="Show All,Yes,No"></Dropdown-stub>
+  <Dropdown-stub className="dropdown__sort-by" label="Sort by" items="Most recent,Oldest"></Dropdown-stub>
 </div>
 `;
