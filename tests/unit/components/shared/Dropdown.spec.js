@@ -32,7 +32,7 @@ describe('Dropdown.vue', () => {
     })
   })
 
-  it('renders according to design when is open', () => {
+  it('selects second item in the dropdown', () => {
     const wrapper = shallowMount(Dropdown, {
       propsData: props,
     })
