@@ -1,29 +1,14 @@
-import Vuex from 'vuex'
-import { mount, createLocalVue } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import { createRenderer } from 'vue-server-renderer'
 
 import SearchTextBox from '@/components/SearchArea/Filter/TextBox/index.vue'
 
 
-const localVue = createLocalVue()
-localVue.use(Vuex)
-
-const actions = { fetchDataSources: jest.fn() }
-const state = {
-  loading: false,
-  data: [{ name: 'DataSource 1' }, { name: 'DataSource 2' }],
-  error: false,
-}
-const store = new Vuex.Store({
-  state,
-  actions,
-})
-
 describe('SearchTextBox.vue', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(SearchTextBox, { store, localVue })
+    wrapper = shallowMount(SearchTextBox)
   })
 
   it('renders according to design', () => {
@@ -34,11 +19,20 @@ describe('SearchTextBox.vue', () => {
     })
   })
 
-  it('dispatches "fetchDataSources" when input event value has nmore than 3 characters', () => {
+  it('calls `onClick` props method when execute `changeText` with more than 3 characters', () => {
     const input = wrapper.find('#searchBox')
     input.element.value = 'data'
     input.trigger('input')
 
-    expect(actions.fetchDataSources).toHaveBeenCalled()
+    expect(wrapper.emitted().onClick).toBeTruthy()
+    expect(wrapper.emitted().onClick[0]).toEqual(['data'])
+  })
+
+  it('does not call `onClick` props method when execute `changeText` with less than 4 characters', () => {
+    const input = wrapper.find('#searchBox')
+    input.element.value = 'dat'
+    input.trigger('input')
+
+    expect(wrapper.emitted().onClick).toBeFalsy()
   })
 })

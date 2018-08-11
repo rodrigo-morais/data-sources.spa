@@ -14,5 +14,6 @@ export default Component({
 
   handleToggle() {
     this.checked = !this.checked
+    this.$emit('onClick', this.checked)
   }
 })

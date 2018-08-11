@@ -10,10 +10,15 @@ const props = {
 }
 
 describe('Dropdown.vue', () => {
-  it('renders according to design', () => {
-    const wrapper = shallowMount(Dropdown, {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallowMount(Dropdown, {
       propsData: props,
     })
+  })
+
+  it('renders according to design', () => {
     const renderer = createRenderer()
     renderer.renderToString(wrapper.vm, (err, str) => {
       if (err) throw new Error(err)
@@ -33,10 +38,6 @@ describe('Dropdown.vue', () => {
   })
 
   it('selects second item in the dropdown', () => {
-    const wrapper = shallowMount(Dropdown, {
-      propsData: props,
-    })
-
     const dropdown = wrapper.find('.dropdown')
     dropdown.find('a').trigger('click')
 
@@ -44,5 +45,13 @@ describe('Dropdown.vue', () => {
     secondItem.trigger('click')
 
     expect(dropdown.findAll('a').at(1).text()).toBe('2')
+  })
+
+  it('calls `onClick` props method when execute `handleToggle`', () => {
+    const dropdownItem = wrapper.find('.dropdown__menu').find('ul').find('li')
+    dropdownItem.trigger('click')
+
+    expect(wrapper.emitted().onClick).toBeTruthy()
+    expect(wrapper.emitted().onClick[0][0].replace(/\s/g, '')).toEqual('1')
   })
 })

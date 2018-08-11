@@ -8,10 +8,13 @@ const props = {
 }
 
 describe('Checkbox.vue', () => {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallowMount(Checkbox)
+  })
+
   it('renders according to design', () => {
-    const wrapper = shallowMount(Checkbox, {
-      propsData: props,
-    })
     const renderer = createRenderer()
     renderer.renderToString(wrapper.vm, (err, str) => {
       if (err) throw new Error(err)
@@ -28,5 +31,13 @@ describe('Checkbox.vue', () => {
       if (err) throw new Error(err)
       expect(str).toMatchSnapshot()
     })
+  })
+
+  it('calls `onClick` props method when execute `handleToggle`', () => {
+    const checkbox = wrapper.find('.checkbox')
+    checkbox.trigger('click')
+
+    expect(wrapper.emitted().onClick).toBeTruthy()
+    expect(wrapper.emitted().onClick[0]).toEqual([true])
   })
 })

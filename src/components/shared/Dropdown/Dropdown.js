@@ -24,5 +24,6 @@ export default Component({
   selectItem({ target }) {
     this.currentValue = target.innerHTML
     this.handleToggle()
+    this.$emit('onClick', target.innerHTML)
   }
 })

@@ -3,7 +3,7 @@
 exports[`Checkbox.vue renders according to design 1`] = `
 <div>
   <div class="checkbox"><span>V</span></div>
-  <p class="label">Select</p>
+  <p class="label"></p>
 </div>
 `;
 

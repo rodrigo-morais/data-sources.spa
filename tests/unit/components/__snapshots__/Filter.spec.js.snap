@@ -2,9 +2,53 @@
 
 exports[`SearchFilter.vue renders according to design 1`] = `
 <div class="filter">
-  <SearchTextBox-stub></SearchTextBox-stub>
-  <Dropdown-stub className="dropdown__legal-entity" label="Legal Entity" items="Show All,Yes,No"></Dropdown-stub>
-  <Dropdown-stub className="dropdown__sort-by" label="Sort by" items="Most recent,Oldest"></Dropdown-stub>
-  <Checkbox-stub className="checkbox__archived" label="Show archived" isChecked="true"></Checkbox-stub>
+  <form>
+    <input type="text" id="searchBox" placeholder=" Filter Data Sources...">
+  </form>
+  <div class="dropdown dropdown__legal-entity">
+    <a href="#" class="dropdown__label">
+      Legal Entity:
+    </a>
+    <a href="#" class="dropdown__label dropdown__currentValue">
+      Show All
+    </a>
+    <div class="dropdown__menu--close"></div>
+    <div class="dropdown__menu dropdown__menu--close">
+      <ul>
+        <li>
+          Show All
+        </li>
+        <li>
+          Yes
+        </li>
+        <li>
+          No
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="dropdown dropdown__sort-by">
+    <a href="#" class="dropdown__label">
+      Sort by:
+    </a>
+    <a href="#" class="dropdown__label dropdown__currentValue">
+      Most recent
+    </a>
+    <div class="dropdown__menu--close"></div>
+    <div class="dropdown__menu dropdown__menu--close">
+      <ul>
+        <li>
+          Most recent
+        </li>
+        <li>
+          Oldest
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="checkbox__archived">
+    <div class="checkbox checkbox--checked"><span>V</span></div>
+    <p class="label">Show archived</p>
+  </div>
 </div>
 `;

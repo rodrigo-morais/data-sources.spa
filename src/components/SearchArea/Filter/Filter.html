@@ -1,16 +1,21 @@
 <div class="filter">
-  <SearchTextBox/>
+  <SearchTextBox
+    @onClick="changeDataSourceName"
+  />
   <Dropdown
+    @onClick="changeLegalEntity"
     class-name="dropdown__legal-entity"
     label="Legal Entity"
     v-bind:items="['Show All', 'Yes', 'No']"
   />
   <Dropdown
+    @onClick="changeSortBy"
     class-name="dropdown__sort-by"
     label="Sort by"
     v-bind:items="['Most recent', 'Oldest']"
   />
   <Checkbox
+    @onClick="changeArchieved"
     class-name="checkbox__archived"
     label="Show archived"
     is-checked

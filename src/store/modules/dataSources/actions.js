@@ -1,7 +1,9 @@
 import { DATA_SOURCES_PENDING, DATA_SOURCES_FULFILLED } from './constants'
 
 export default {
-  fetchDataSources({ commit }) {
+  fetchDataSources({ commit }, {
+    name, legalEntity, sortBy, archived,
+  }) {
     return new Promise((resolve) => {
       commit(DATA_SOURCES_PENDING)
       setTimeout(() => {
