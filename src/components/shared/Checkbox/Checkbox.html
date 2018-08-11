@@ -1,0 +1,6 @@
+<div @click="handleToggle" v-bind:class="[className]">
+  <div v-bind:class="[checkboxClass, {'checkbox--checked': checked}]">
+    <span>V</span>
+  </div>
+  <p class="label">{{label}}</p>
+</div>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox.vue renders according to design 1`] = `
+<div>
+  <div class="checkbox"><span>V</span></div>
+  <p class="label">Select</p>
+</div>
+`;
+
+exports[`Checkbox.vue renders according to design when is checked 1`] = `
+<div>
+  <div class="checkbox checkbox--checked"><span>V</span></div>
+  <p class="label">Select</p>
+</div>
+`;
