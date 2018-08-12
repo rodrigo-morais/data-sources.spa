@@ -27,11 +27,11 @@ describe('Dropdown.vue', () => {
   })
 
   it('renders according to design when is open', () => {
-    const wrapper = shallowMount(Dropdown, {
+    const wrapperOpened = shallowMount(Dropdown, {
       propsData: { ...props, isOpen: true },
     })
     const renderer = createRenderer()
-    renderer.renderToString(wrapper.vm, (err, str) => {
+    renderer.renderToString(wrapperOpened.vm, (err, str) => {
       if (err) throw new Error(err)
       expect(str).toMatchSnapshot()
     })

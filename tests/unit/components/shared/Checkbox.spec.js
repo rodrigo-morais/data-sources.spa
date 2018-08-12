@@ -23,11 +23,11 @@ describe('Checkbox.vue', () => {
   })
 
   it('renders according to design when is checked', () => {
-    const wrapper = shallowMount(Checkbox, {
+    const wrapperChecked = shallowMount(Checkbox, {
       propsData: { ...props, isChecked: true },
     })
     const renderer = createRenderer()
-    renderer.renderToString(wrapper.vm, (err, str) => {
+    renderer.renderToString(wrapperChecked.vm, (err, str) => {
       if (err) throw new Error(err)
       expect(str).toMatchSnapshot()
     })

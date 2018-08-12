@@ -1,0 +1,7 @@
+<div class="result" v-if="hasData">
+  <Item
+    v-for="(item, index) in dataSources.data"
+    :name="item.name"
+    :archived="item.archived"
+   />
+</div>

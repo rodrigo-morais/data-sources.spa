@@ -1,0 +1,8 @@
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-column: span 2;
+  grid-row: 2;
+}

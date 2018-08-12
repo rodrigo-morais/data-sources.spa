@@ -47,7 +47,7 @@ exports[`SearchFilter.vue renders according to design 1`] = `
     </div>
   </div>
   <div class="checkbox__archived">
-    <div class="checkbox checkbox--checked"><span>V</span></div>
+    <div class="checkbox"><span>V</span></div>
     <p class="label">Show archived</p>
   </div>
 </div>

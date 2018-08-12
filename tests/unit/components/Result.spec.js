@@ -1,7 +1,8 @@
 import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import { createRenderer } from 'vue-server-renderer'
-import SearchArea from '@/components/SearchArea/index.vue'
+import Result from '@/components/SearchArea/Result/index.vue'
+
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -17,10 +18,10 @@ const store = new Vuex.Store({
   actions,
 })
 
-describe('SearchArea.vue', () => {
+describe('Result.vue', () => {
   it('renders according to design', () => {
     const renderer = createRenderer()
-    const wrapper = shallowMount(SearchArea, { store, localVue })
+    const wrapper = shallowMount(Result, { store, localVue })
     renderer.renderToString(wrapper.vm, (err, str) => {
       if (err) throw new Error(err)
       expect(str).toMatchSnapshot()

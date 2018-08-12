@@ -22,28 +22,40 @@ export default Component({
   changeDataSourceName(name) {
     this.dataSourceName = name
     this.search({
-      name: this.dataSourceName, legalEntity: this.legalEntity, sortBy: this.sortBy, archived: this.archived,
+      name: this.dataSourceName,
+      legalEntity: this.legalEntity,
+      sortBy: this.sortBy,
+      archived: this.archived,
     })
   }
 
   changeLegalEntity(legalEntity) {
     this.legalEntity = legalEntity
     this.search({
-      name: this.dataSourceName, legalEntity: this.legalEntity, sortBy: this.sortBy, archived: this.archived,
+      name: this.dataSourceName,
+      legalEntity: this.legalEntity,
+      sortBy: this.sortBy,
+      archived: this.archived,
     })
   }
 
   changeSortBy(sortBy) {
     this.sortBy = sortBy
     this.search({
-      name: this.dataSourceName, legalEntity: this.legalEntity, sortBy: this.sortBy, archived: this.archived,
+      name: this.dataSourceName,
+      legalEntity: this.legalEntity,
+      sortBy: this.sortBy,
+      archived: this.archived,
     })
   }
 
   changeArchieved(archieved) {
     this.archived = archieved
     this.search({
-      name: this.dataSourceName, legalEntity: this.legalEntity, sortBy: this.sortBy, archived: this.archived,
+      name: this.dataSourceName,
+      legalEntity: this.legalEntity,
+      sortBy: this.sortBy,
+      archived: this.archived,
     })
   }
 })
