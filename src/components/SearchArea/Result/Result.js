@@ -8,9 +8,9 @@ export default Component({
   components: { Item },
   computed: {
     ...mapState({
-      dataSources: ({ dataSources }) => dataSources,
-      hasData: ({ dataSources }) =>
-        dataSources && !dataSources.loading && !dataSources.error && dataSources.data,
+      dataSources: ({ search: { data } }) => (data ? data.dataSources : []),
+      hasData: ({ search: { data, loading, error } }) =>
+        data && !loading && !error && data.dataSources,
     }),
   },
 })(class SearchResult extends Vue {})

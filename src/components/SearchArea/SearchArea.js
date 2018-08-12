@@ -3,10 +3,11 @@ import { mapActions } from 'vuex'
 import Component from 'vue-class-component'
 import SearchFilter from './Filter/index.vue'
 import SearchResult from './Result/index.vue'
+import SearchPagination from './Pagination/index.vue'
 
 export default Component({
   name: 'SearchArea',
-  components: { SearchFilter, SearchResult },
+  components: { SearchFilter, SearchResult, SearchPagination },
   methods: {
     ...mapActions({
       search: 'fetchDataSources',

@@ -4,5 +4,6 @@ exports[`SearchArea.vue renders according to design 1`] = `
 <section>
   <SearchFilter-stub></SearchFilter-stub>
   <SearchResult-stub></SearchResult-stub>
+  <SearchPagination-stub></SearchPagination-stub>
 </section>
 `;

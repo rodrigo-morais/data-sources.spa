@@ -9,9 +9,11 @@ localVue.use(Vuex)
 
 const actions = { fetchDataSources: jest.fn() }
 const state = {
-  loading: false,
-  data: [{ name: 'DataSource 1' }, { name: 'DataSource 2' }],
-  error: false,
+  search: {
+    loading: false,
+    data: { dataSources: [{ name: 'DataSource 1', archived: true }, { name: 'DataSource 2', archived: false }] },
+    error: false,
+  },
 }
 const store = new Vuex.Store({
   state,

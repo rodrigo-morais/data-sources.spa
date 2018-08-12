@@ -11,16 +11,21 @@ export default Component({
   methods: {
     ...mapActions({
       search: 'fetchDataSources',
+      updateName: 'changeName',
+      updateLegalEntity: 'changeLegalEntity',
+      updateSortBy: 'changeSortBy',
+      updateArchived: 'changeArchived',
     }),
   },
 })(class SearchFilter extends Vue {
   dataSourceName = ''
   legalEntity = ''
   sortBy = 1
-  archived = true
+  archived = false
 
   changeDataSourceName(name) {
     this.dataSourceName = name
+    this.updateName({ name })
     this.search({
       name: this.dataSourceName,
       legalEntity: this.legalEntity,
@@ -30,7 +35,15 @@ export default Component({
   }
 
   changeLegalEntity(legalEntity) {
-    this.legalEntity = legalEntity
+    if (legalEntity.replace(/\s/g, '') === 'ShowAll') {
+      this.legalEntity = ''
+    } else if (legalEntity.replace(/\s/g, '') === 'Yes') {
+      this.legalEntity = 'true'
+    } else {
+      this.legalEntity = 'false'
+    }
+
+    this.updateLegalEntity({ legalEntity })
     this.search({
       name: this.dataSourceName,
       legalEntity: this.legalEntity,
@@ -40,7 +53,8 @@ export default Component({
   }
 
   changeSortBy(sortBy) {
-    this.sortBy = sortBy
+    this.sortBy = sortBy.replace(/\s/g, '') === 'Mostrecent' ? 1 : 2
+    this.updateSortBy({ sortBy })
     this.search({
       name: this.dataSourceName,
       legalEntity: this.legalEntity,
@@ -49,8 +63,10 @@ export default Component({
     })
   }
 
-  changeArchieved(archieved) {
-    this.archived = archieved
+  changeArchieved(archived) {
+    this.archived = archived
+
+    this.updateArchived({ archived })
     this.search({
       name: this.dataSourceName,
       legalEntity: this.legalEntity,

@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Result.vue renders according to design 1`] = `<!---->`;
+exports[`Result.vue renders according to design 1`] = `
+<div class="result">
+  <Item-stub name="DataSource 1" archived="true"></Item-stub>
+  <Item-stub name="DataSource 2"></Item-stub>
+</div>
+`;
